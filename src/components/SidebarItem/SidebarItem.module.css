@@ -1,0 +1,36 @@
+.sidebarItem {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 57px;
+    margin-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: color;
+}
+
+.sidebarItem.active {
+    background-color: var(--sidebar-active-background);
+    box-shadow: -4px -2px 4px white;
+}
+
+.sidebarItem:hover {
+    background-color: var(--sidebar-active-background);
+}
+
+.expanded {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.text {
+    width: 0;
+    overflow: hidden;
+}
+
+.icon {
+    margin-left: 10px;
+}

@@ -1,0 +1,53 @@
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: var(--sidebar-background);
+    position: fixed;
+}
+
+.active {
+    width: 200px;
+}
+
+.logoWrapper {
+    width: 80%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    height: 100%;
+}
+
+.sidebarList {
+    text-decoration: none;
+}
+
+.closeBtn {
+    width: 40px;
+    height: 40px;
+    margin-right: 10%;
+    background-color: var(--sidebar-background);
+    border: 0;
+    border-radius: 10px;
+}
+
+.closeBtn:hover {
+    background-color: var(--sidebar-active-background);
+}
+
+.close {
+    width: 27px;
+    height: 22px;
+    cursor: pointer;
+}
+
+
+
+
