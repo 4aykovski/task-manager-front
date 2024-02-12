@@ -1,8 +1,7 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import classes from "../Sidebar/Sidebar.module.css";
 import SidebarItem from "../SidebarItem/SidebarItem";
 import {sidebarItem} from "../../types/types";
-import Sidebar from "../Sidebar/Sidebar";
 
 interface SidebarPagesListProps {
     items: sidebarItem[]
