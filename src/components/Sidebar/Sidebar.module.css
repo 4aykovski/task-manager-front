@@ -2,19 +2,22 @@
     width: 80px;
     height: 100vh;
     background-color: var(--sidebar-background);
-    position: fixed;
+    display: block;
+    transition: width 200ms linear;
 }
 
 .sidebar.active {
     width: 200px;
+    transition: width 200ms linear;
 }
 
 .logoWrapper {
-    width: 80%;
+    width: 100%;
     height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15%;
 }
 
 .listWrapper {
@@ -32,11 +35,11 @@
 .closeBtn {
     width: 40px;
     height: 40px;
-    margin-right: 10%;
     background-color: var(--sidebar-background);
     border: 0;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 12px;
 }
 
 .closeBtn:hover {

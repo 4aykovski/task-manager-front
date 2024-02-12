@@ -1,4 +1,4 @@
-import React, {createContext, FC, useState} from 'react';
+import React, {FC, useState} from 'react';
 import Logo from "../Logo/Logo";
 import {sidebarItem} from "../../types/types";
 import classes from "./Sidebar.module.css";
@@ -17,24 +17,41 @@ const Sidebar: FC<SidebarProps> = ({items}) => {
     return (
         <aside className={isExpanded ? classes.sidebar + ' ' + classes.active : classes.sidebar}>
             <nav className={classes.listWrapper}>
-                <div className={classes.logoWrapper}>
-                    {isExpanded ? <Logo/> : <div/>}
-                    <button
-                        className={classes.closeBtn}
-                        onClick={() => setIsExpanded(!isExpanded)}>
-                        <img
-                            src={`${iconsDir}/close.svg`}
-                            alt="close"
-                            className={classes.close}/>
-                    </button>
-                </div>
+                {isExpanded
+                    ?
+                    <div className={classes.logoWrapper}>
+                        <Logo/>
+                        <button
+                            className={classes.closeBtn}
+                            onClick={() => setIsExpanded(!isExpanded)}>
+                            <img
+                                src={`${iconsDir}/close.svg`}
+                                alt="close"
+                                className={classes.close}/>
+                        </button>
+                    </div>
+                    :
+                    <div className={classes.logoWrapper}>
+                        <button
+                            className={classes.closeBtn}
+                            onClick={() => setIsExpanded(!isExpanded)}>
+                            <img
+                                src={isExpanded
+                                        ? `${iconsDir}/close.svg`
+                                        : `${iconsDir}/open.svg`}
+                                alt="close"
+                                className={classes.close}/>
+                        </button>
+                    </div>
+                }
                 <SidebarContext.Provider value={isExpanded}>
                     <SidebarPagesList items={items}/>
                 </SidebarContext.Provider>
 
             </nav>
         </aside>
-    );
+    )
+        ;
 };
 
 export default Sidebar;

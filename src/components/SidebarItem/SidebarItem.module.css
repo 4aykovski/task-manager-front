@@ -9,7 +9,7 @@
     padding-right: 15px;
     border-radius: 10px 0 0 10px;
     cursor: pointer;
-    transition: color;
+    transition: width 1s linear;
 }
 
 .sidebarItem.active {
