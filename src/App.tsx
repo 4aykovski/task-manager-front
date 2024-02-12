@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import './styles/App.css'
 import Sidebar from "./components/Sidebar/Sidebar";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Projects from "./pages/Projects";
-import Tasks from "./pages/Tasks";
-import NotFound from "./pages/NotFound";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRoute";
 
 function App() {
     const currentPath = window.location.pathname.split('/');
@@ -26,23 +23,7 @@ function App() {
         <BrowserRouter>
             <main>
                 <Sidebar items={sidebarItems}/>
-                <Routes>
-                    <Route
-                        path="/dashboard"
-                        element={<Dashboard/>}/>
-                    <Route
-                        path="/"
-                        element={<Dashboard/>}/>
-                    <Route
-                        path="/projects"
-                        element={<Projects/>}/>
-                    <Route
-                        path="/tasks"
-                        element={<Tasks/>}/>
-                    <Route
-                        path="*"
-                        element={<NotFound/>}/>
-                </Routes>
+                <AppRouter/>
             </main>
         </BrowserRouter>
     );
