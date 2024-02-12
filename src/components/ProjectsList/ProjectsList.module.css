@@ -1,0 +1,15 @@
+.projectListWrapper {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectList {
+    list-style-type: none;
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+}
