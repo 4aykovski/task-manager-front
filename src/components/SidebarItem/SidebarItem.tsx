@@ -23,7 +23,7 @@ const SidebarItem: FC<SidebarItemProps> = ({item, onClick}) => {
                     src={`${iconsDir}${item.value.toLowerCase()}.svg`}
                     alt="icon"
                     className={classes.icon}/>
-                <span className={classes.text + ' ' + isExpanded ? classes.expanded : ''}>{item.value}</span>
+                <span className={isExpanded ? classes.text + ' ' + classes.expanded : classes.text}>{item.value}</span>
             </li>
         </Link>
     );

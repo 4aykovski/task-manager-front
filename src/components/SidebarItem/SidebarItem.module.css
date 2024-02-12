@@ -21,14 +21,14 @@
     background-color: var(--sidebar-active-background);
 }
 
-.expanded {
-    padding-left: 10px;
-    width: 100%;
-}
-
 .text {
     width: 0;
     overflow: hidden;
+}
+
+.text.expanded {
+    padding-left: 10px;
+    width: 100%;
 }
 
 .icon {

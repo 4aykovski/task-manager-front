@@ -1,11 +1,11 @@
 .sidebar {
-    width: 100px;
+    width: 80px;
     height: 100vh;
     background-color: var(--sidebar-background);
     position: fixed;
 }
 
-.active {
+.sidebar.active {
     width: 200px;
 }
 
@@ -36,6 +36,7 @@
     background-color: var(--sidebar-background);
     border: 0;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .closeBtn:hover {
@@ -45,7 +46,6 @@
 .close {
     width: 27px;
     height: 22px;
-    cursor: pointer;
 }
 
 

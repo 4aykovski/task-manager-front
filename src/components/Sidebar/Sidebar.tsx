@@ -15,16 +15,17 @@ const Sidebar: FC<SidebarProps> = ({items}) => {
     const iconsDir = `${process.env.PUBLIC_URL}/assets/icons/`
 
     return (
-        <aside className={classes.sidebar + ' ' + classes.active}>
+        <aside className={isExpanded ? classes.sidebar + ' ' + classes.active : classes.sidebar}>
             <nav className={classes.listWrapper}>
                 <div className={classes.logoWrapper}>
-                    <Logo/>
-                    <button className={classes.closeBtn}>
+                    {isExpanded ? <Logo/> : <div/>}
+                    <button
+                        className={classes.closeBtn}
+                        onClick={() => setIsExpanded(!isExpanded)}>
                         <img
                             src={`${iconsDir}/close.svg`}
                             alt="close"
-                            className={classes.close}
-                            onClick={() => setIsExpanded(!isExpanded)}/>
+                            className={classes.close}/>
                     </button>
                 </div>
                 <SidebarContext.Provider value={isExpanded}>
