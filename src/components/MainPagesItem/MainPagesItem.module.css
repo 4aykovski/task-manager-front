@@ -1,4 +1,4 @@
-.sidebarItem {
+.mainPagesItem {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -12,12 +12,12 @@
     transition: width 1s linear;
 }
 
-.sidebarItem.active {
+.mainPagesItem.active {
     background-color: var(--sidebar-active-background);
     box-shadow: -4px -2px 4px white;
 }
 
-.sidebarItem:hover {
+.mainPagesItem:hover {
     background-color: var(--sidebar-active-background);
 }
 

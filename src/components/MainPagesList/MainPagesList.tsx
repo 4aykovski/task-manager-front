@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
-import classes from "../Sidebar/Sidebar.module.css";
-import SidebarItem from "../SidebarItem/SidebarItem";
+import classes from './MainPagesList.module.css'
+import MainPagesItem from "../MainPagesItem/MainPagesItem";
 import {sidebarItem} from "../../types/types";
 
 interface SidebarPagesListProps {
     items: sidebarItem[]
 }
 
-const SidebarPagesList: FC<SidebarPagesListProps> = ({items}) => {
+const MainPagesList: FC<SidebarPagesListProps> = ({items}) => {
 
 
     const changeActiveItem = (item: sidebarItem) => {
@@ -21,7 +21,7 @@ const SidebarPagesList: FC<SidebarPagesListProps> = ({items}) => {
 
         <ul className={classes.sidebarList}>
             {items.map(item =>
-                <SidebarItem
+                <MainPagesItem
                     key={item.value}
                     item={item}
                     onClick={changeActiveItem}
@@ -31,4 +31,4 @@ const SidebarPagesList: FC<SidebarPagesListProps> = ({items}) => {
     );
 };
 
-export default SidebarPagesList;
+export default MainPagesList;

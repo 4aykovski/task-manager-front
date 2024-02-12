@@ -2,8 +2,8 @@ import React, {FC, useState} from 'react';
 import Logo from "../Logo/Logo";
 import {sidebarItem} from "../../types/types";
 import classes from "./Sidebar.module.css";
-import SidebarPagesList from "../SidebarPagesList/SidebarPagesList";
 import {SidebarContext} from "../../context";
+import MainPagesList from "../MainPagesList/MainPagesList";
 
 interface SidebarProps {
     items: sidebarItem[]
@@ -45,7 +45,7 @@ const Sidebar: FC<SidebarProps> = ({items}) => {
                     </div>
                 }
                 <SidebarContext.Provider value={isExpanded}>
-                    <SidebarPagesList items={items}/>
+                    <MainPagesList items={items}/>
                 </SidebarContext.Provider>
 
             </nav>

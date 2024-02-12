@@ -9,7 +9,7 @@ function App() {
 
     console.log(currentPath)
 
-    const sidebarItems = [
+    const mainPagesItems = [
         {
             value: "DASHBOARD",
             route: "/dashboard",
@@ -22,7 +22,7 @@ function App() {
     return (
         <BrowserRouter>
             <main>
-                <Sidebar items={sidebarItems}/>
+                <Sidebar items={mainPagesItems}/>
                 <AppRouter/>
             </main>
         </BrowserRouter>
