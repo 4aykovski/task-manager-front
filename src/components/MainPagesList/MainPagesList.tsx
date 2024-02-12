@@ -1,30 +1,22 @@
 import React, {FC} from 'react';
 import classes from './MainPagesList.module.css'
-import MainPagesItem from "../MainPagesItem/MainPagesItem";
-import {sidebarItem} from "../../types/types";
+import MainPagesListItem from "../MainPagesListItem/MainPagesListItem";
+import {mainPagesListItem} from "../../types/types";
 
-interface SidebarPagesListProps {
-    items: sidebarItem[]
+interface MainPagesListProps {
+    items: mainPagesListItem[];
+    onClickItem: (item: mainPagesListItem) => void;
 }
 
-const MainPagesList: FC<SidebarPagesListProps> = ({items}) => {
-
-
-    const changeActiveItem = (item: sidebarItem) => {
-        items.map(i => i.activeState[1](false))
-        item.activeState[1](true)
-    }
-
-
+const MainPagesList: FC<MainPagesListProps> = ({items, onClickItem}) => {
 
     return (
-
-        <ul className={classes.sidebarList}>
+        <ul className={classes.mainPagesList}>
             {items.map(item =>
-                <MainPagesItem
+                <MainPagesListItem
                     key={item.value}
                     item={item}
-                    onClick={changeActiveItem}
+                    onClick={onClickItem}
                 />
             )}
         </ul>

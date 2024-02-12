@@ -1,18 +1,18 @@
 import React, {FC, useContext} from 'react';
-import {sidebarItem} from "../../types/types";
-import classes from "./MainPagesItem.module.css";
+import {mainPagesListItem} from "../../types/types";
+import classes from "./MainPagesListItem.module.css";
 import {Link} from "react-router-dom";
 import {SidebarContext} from "../../context";
 
-interface SidebarItemProps {
-    item: sidebarItem;
-    onClick: (item: sidebarItem) => void;
+interface MainPagesItemProps {
+    item: mainPagesListItem;
+    onClick: (item: mainPagesListItem) => void;
 }
 
-const MainPagesItem: FC<SidebarItemProps> = ({item, onClick}) => {
+const MainPagesListItem: FC<MainPagesItemProps> = ({item, onClick}) => {
     const iconsDir = `${process.env.PUBLIC_URL}/assets/icons/`
     const isExpanded = useContext(SidebarContext)
-    console.log(isExpanded)
+
     return (
         <Link
             to={item.route}
@@ -29,4 +29,4 @@ const MainPagesItem: FC<SidebarItemProps> = ({item, onClick}) => {
     );
 };
 
-export default MainPagesItem;
+export default MainPagesListItem;

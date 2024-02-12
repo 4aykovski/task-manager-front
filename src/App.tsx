@@ -7,8 +7,6 @@ import AppRouter from "./components/AppRoute";
 function App() {
     const currentPath = window.location.pathname.split('/');
 
-    console.log(currentPath)
-
     const mainPagesItems = [
         {
             value: "DASHBOARD",

@@ -5,8 +5,8 @@
     justify-content: flex-start;
     align-items: center;
     height: 57px;
-    margin-left: 15px;
-    padding-right: 15px;
+    margin-left: 20px;
+    width: 90%;
     border-radius: 10px 0 0 10px;
     cursor: pointer;
     transition: width 1s linear;

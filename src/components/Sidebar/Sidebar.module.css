@@ -20,11 +20,11 @@
     padding: 15%;
 }
 
-.listWrapper {
+.sidebarWrapper {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: end;
+    align-items: center;
     height: 100%;
 }
 
