@@ -12,7 +12,14 @@ interface SidebarProps {
 }
 
 const Sidebar: FC<SidebarProps> = ({mainPagesListItems, projectsListItems}) => {
-    const [isExpanded, setIsExpanded] = useState<boolean>(true)
+    const [
+        isExpanded,
+        setIsExpanded,
+    ] = useState<boolean>(localStorage.getItem('isExpanded') !== null
+        ? localStorage.getItem('isExpanded') === 'true'
+        : true
+    )
+    localStorage.setItem('isExpanded', String(isExpanded))
 
     const changeActiveItem = (item: mainPagesListItem | projectsListItem) => {
         mainPagesListItems.map(i => i.activeState[1](false))
@@ -27,16 +34,16 @@ const Sidebar: FC<SidebarProps> = ({mainPagesListItems, projectsListItems}) => {
             <nav className={classes.sidebarWrapper}>
                 <div className={classes.logoWrapper}>
                     {isExpanded ? <Logo/> : <></>}
-                        <button
-                            className={classes.closeBtn}
-                            onClick={() => setIsExpanded(!isExpanded)}>
-                            <img
-                                src={isExpanded
-                                    ? `${iconsDir}/close.svg`
-                                    : `${iconsDir}/open.svg`}
-                                alt="close"
-                                className={classes.close}/>
-                        </button>
+                    <button
+                        className={classes.closeBtn}
+                        onClick={() => setIsExpanded(!isExpanded)}>
+                        <img
+                            src={isExpanded
+                                ? `${iconsDir}/close.svg`
+                                : `${iconsDir}/open.svg`}
+                            alt="close"
+                            className={classes.close}/>
+                    </button>
                 </div>
 
                 <SidebarContext.Provider value={isExpanded}>
