@@ -11,24 +11,44 @@ function App() {
         {
             value: "DASHBOARD",
             route: "/dashboard",
+            iconName: 'dashboard.svg',
             activeState: useState(currentPath[1] === 'dashboard' || currentPath[1] === '')
         },
-        {value: "PROJECTS", route: "/projects", activeState: useState(currentPath[1] === 'projects')},
-        {value: "TASKS", route: "/tasks", activeState: useState(currentPath[1] === 'tasks')},
+        {
+            value: "PROJECTS",
+            route: "/projects",
+            iconName: 'projects.svg',
+            activeState: useState(currentPath[1] === 'projects' && currentPath.length === 2)
+        },
+        {value: "TASKS", route: "/tasks", iconName: 'tasks.svg', activeState: useState(currentPath[1] === 'tasks')},
     ]
 
     const projectListItems = [
-        {id: 1, name: "Project1", route: "/projects/1", activeState: useState(false)},
-        {id: 2, name: 'Project2', route: '/projects/2', activeState: useState(false)},
+        {
+            id: 1,
+            name: "Project1",
+            route: "/projects/1",
+            iconName: 'projectIcon.svg',
+            activeState: useState(currentPath[1] === 'projects' && currentPath[2] === '1')
+        },
+        {
+            id: 2,
+            name: 'Project2',
+            route: '/projects/2',
+            iconName: 'projectIcon.svg',
+            activeState: useState(currentPath[1] === 'projects' && currentPath[2] === '2')
+        },
     ]
 
     // TODO: Сделать компонент ICON
-    // TODO: Решить проблему с активынм projects при переключении на отдельный проект
+    // TODO: Решить проблему с активным projects при переключении на отдельный проект
 
     return (
         <BrowserRouter>
             <main>
-                <Sidebar mainPagesListItems={mainPagesItems} projectsListItems={projectListItems}/>
+                <Sidebar
+                    mainPagesListItems={mainPagesItems}
+                    projectsListItems={projectListItems}/>
                 <AppRouter/>
             </main>
         </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, {FC, useContext} from 'react';
 import classes from './ProjectsListItem.module.css'
 import {Link} from "react-router-dom";
-import ProjectIcon from "../UI/ProjectIcon/ProjectIcon";
+import ProjectIcon from "../ui/ProjectIcon/ProjectIcon";
 import {projectsListItem} from "../../types/types";
 import {SidebarContext} from "../../context";
 

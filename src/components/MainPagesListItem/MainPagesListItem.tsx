@@ -3,6 +3,7 @@ import {mainPagesListItem} from "../../types/types";
 import classes from "./MainPagesListItem.module.css";
 import {Link} from "react-router-dom";
 import {SidebarContext} from "../../context";
+import Icon from '../Icon/Icon';
 
 interface MainPagesItemProps {
     item: mainPagesListItem;
@@ -10,7 +11,6 @@ interface MainPagesItemProps {
 }
 
 const MainPagesListItem: FC<MainPagesItemProps> = ({item, onClick}) => {
-    const iconsDir = `${process.env.PUBLIC_URL}/assets/icons/`
     const isExpanded = useContext(SidebarContext)
 
     return (
@@ -19,10 +19,9 @@ const MainPagesListItem: FC<MainPagesItemProps> = ({item, onClick}) => {
             onClick={() => onClick(item)}
         >
             <li className={item.activeState[0] ? classes.mainPagesItem + ' ' + classes.active : classes.mainPagesItem}>
-                <img
-                    src={`${iconsDir}${item.value.toLowerCase()}.svg`}
-                    alt="icon"
-                    className={classes.icon}/>
+                <div className={classes.iconWrapper}>
+                    <Icon iconName={}></Icon>
+                </div>
                 <span className={isExpanded ? classes.text + ' ' + classes.expanded : classes.text}>{item.value}</span>
             </li>
         </Link>
