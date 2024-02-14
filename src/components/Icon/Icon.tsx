@@ -1,17 +1,18 @@
 import React, {FC} from 'react';
-import classes from "../MainPagesListItem/MainPagesListItem.module.css";
 
 interface IconProps {
     iconName: string;
+    className: string;
 }
 
-const Icon: FC<IconProps> = ({iconName}) => {
+const Icon: FC<IconProps> = ({iconName, className}) => {
     const iconsDir = `${process.env.PUBLIC_URL}/assets/icons/`
 
     return (
         <img
             src={`${iconsDir}${iconName}`}
-            alt="icon"/>
+            alt="icon"
+            className={className}/>
     );
 };
 

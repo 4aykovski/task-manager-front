@@ -19,9 +19,7 @@ const MainPagesListItem: FC<MainPagesItemProps> = ({item, onClick}) => {
             onClick={() => onClick(item)}
         >
             <li className={item.activeState[0] ? classes.mainPagesItem + ' ' + classes.active : classes.mainPagesItem}>
-                <div className={classes.iconWrapper}>
-                    <Icon iconName={}></Icon>
-                </div>
+                <Icon iconName={item.iconName} className={classes.icon}></Icon>
                 <span className={isExpanded ? classes.text + ' ' + classes.expanded : classes.text}>{item.value}</span>
             </li>
         </Link>

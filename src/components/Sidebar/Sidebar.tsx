@@ -27,21 +27,25 @@ const Sidebar: FC<SidebarProps> = ({mainPagesListItems, projectsListItems}) => {
             <nav className={classes.sidebarWrapper}>
                 <div className={classes.logoWrapper}>
                     {isExpanded ? <Logo/> : <></>}
-                    <button
-                        className={classes.closeBtn}
-                        onClick={() => setIsExpanded(!isExpanded)}>
-                        <img
-                            src={isExpanded
-                                ? `${iconsDir}/close.svg`
-                                : `${iconsDir}/open.svg`}
-                            alt="close"
-                            className={classes.close}/>
-                    </button>
+                        <button
+                            className={classes.closeBtn}
+                            onClick={() => setIsExpanded(!isExpanded)}>
+                            <img
+                                src={isExpanded
+                                    ? `${iconsDir}/close.svg`
+                                    : `${iconsDir}/open.svg`}
+                                alt="close"
+                                className={classes.close}/>
+                        </button>
                 </div>
 
                 <SidebarContext.Provider value={isExpanded}>
-                    <MainPagesList items={mainPagesListItems} onClickItem={changeActiveItem}/>
-                    <ProjectsList items={projectsListItems} onClickItem={changeActiveItem}/>
+                    <MainPagesList
+                        items={mainPagesListItems}
+                        onClickItem={changeActiveItem}/>
+                    <ProjectsList
+                        items={projectsListItems}
+                        onClickItem={changeActiveItem}/>
                 </SidebarContext.Provider>
             </nav>
         </aside>

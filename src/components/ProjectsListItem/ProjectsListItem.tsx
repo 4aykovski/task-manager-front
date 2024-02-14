@@ -1,9 +1,9 @@
 import React, {FC, useContext} from 'react';
 import classes from './ProjectsListItem.module.css'
 import {Link} from "react-router-dom";
-import ProjectIcon from "../ui/ProjectIcon/ProjectIcon";
 import {projectsListItem} from "../../types/types";
 import {SidebarContext} from "../../context";
+import Icon from "../Icon/Icon";
 
 interface ProjectItemProps {
     item: projectsListItem
@@ -18,7 +18,7 @@ const ProjectsListItem: FC<ProjectItemProps> = ({item, onClick}) => {
             to={item.route}
             onClick={() => onClick(item)}>
             <div className={classes.projectsListItemWrapper}>
-                <ProjectIcon className={classes.itemIcon}/>
+                <Icon iconName={item.iconName} className={classes.itemIcon}></Icon>
                 {isExpanded
                     ?
                     <li className={item.activeState[0] ? classes.projectsListItem + ' ' + classes.active : classes.projectsListItem}>
