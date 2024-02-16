@@ -13,8 +13,12 @@
 #root {
     --sidebar-background: #5C4E69;
     --sidebar-active-background: #4B3E56;
+    --main-background: #6C5B7B;
+    display: flex;
 }
 
 main {
-    display: flex;
+    flex: 1;
+    height: 100vh;
+    background-color: var(--main-background);
 }

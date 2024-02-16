@@ -45,10 +45,10 @@ function App() {
 
     return (
         <BrowserRouter>
+            <Sidebar
+                mainPagesListItems={mainPagesItems}
+                projectsListItems={projectListItems}/>
             <main>
-                <Sidebar
-                    mainPagesListItems={mainPagesItems}
-                    projectsListItems={projectListItems}/>
                 <AppRouter/>
             </main>
         </BrowserRouter>
