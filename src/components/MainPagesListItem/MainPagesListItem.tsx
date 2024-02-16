@@ -3,7 +3,7 @@ import {mainPagesListItem} from "../../types/types";
 import classes from "./MainPagesListItem.module.css";
 import {Link} from "react-router-dom";
 import {SidebarContext} from "../../context";
-import Icon from '../Icon/Icon';
+import Icon from '../ui/Icon/Icon';
 
 interface MainPagesItemProps {
     item: mainPagesListItem;

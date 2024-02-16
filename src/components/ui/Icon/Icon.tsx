@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 interface IconProps {
     iconName: string;
-    className: string;
+    className?: string;
 }
 
 const Icon: FC<IconProps> = ({iconName, className}) => {

@@ -3,7 +3,7 @@ import classes from './ProjectsListItem.module.css'
 import {Link} from "react-router-dom";
 import {projectsListItem} from "../../types/types";
 import {SidebarContext} from "../../context";
-import Icon from "../Icon/Icon";
+import Icon from "../ui/Icon/Icon";
 
 interface ProjectItemProps {
     item: projectsListItem

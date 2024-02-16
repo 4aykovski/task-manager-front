@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import Logo from "../Logo/Logo";
+import Logo from "../ui/Logo/Logo";
 import {mainPagesListItem, projectsListItem} from "../../types/types";
 import classes from "./Sidebar.module.css";
 import {SidebarContext} from "../../context";
