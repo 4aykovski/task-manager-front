@@ -12,7 +12,7 @@ const Header: FC<HeaderProps> = ({name}) => {
         <header>
             <div className={classes.LeftPart}>
                 <Card>
-                    LeftPart
+                    {name}
                 </Card>
             </div>
             <div className={classes.RightPart}>
