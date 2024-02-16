@@ -1,0 +1,31 @@
+.projectsListItemWrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.projectsListItem {
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.projectsListItem.active {
+    background-color: var(--sidebar-active-background);
+}
+
+.projectsListItem:hover {
+    background-color: var(--sidebar-active-background);
+}
+
+.itemIcon {
+    margin-left: 10px;
+}
+
+.text {
+    width: 0;
+    overflow: hidden;
+}
+
+.text.expanded {
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+.mainPagesItem {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 57px;
+    margin-left: 20px;
+    width: 90%;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: width 1s linear;
+}
+
+.mainPagesItem.active {
+    background-color: var(--sidebar-active-background);
+    box-shadow: -4px -2px 4px white;
+}
+
+.mainPagesItem:hover {
+    background-color: var(--sidebar-active-background);
+}
+
+.text {
+    width: 0;
+    overflow: hidden;
+}
+
+.text.expanded {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.icon {
+    margin-left: 10px;
+}
