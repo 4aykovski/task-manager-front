@@ -12,7 +12,7 @@ function App() {
             value: "DASHBOARD",
             route: "/dashboard",
             iconName: 'dashboard.svg',
-            activeState: useState(currentPath[1] === 'dashboard' || currentPath[1] === '')
+            activeState: useState(currentPath[1] === 'dashboard')
         },
         {
             value: "PROJECTS",
@@ -45,9 +45,14 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Sidebar
-                mainPagesListItems={mainPagesItems}
-                projectsListItems={projectListItems}/>
+            {currentPath[1] !== ''
+                ?
+                <Sidebar
+                    mainPagesListItems={mainPagesItems}
+                    projectsListItems={projectListItems}/>
+                :
+                <></>
+            }
             <main>
                 <AppRouter/>
             </main>
