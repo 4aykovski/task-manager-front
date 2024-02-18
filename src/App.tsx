@@ -40,9 +40,6 @@ function App() {
         },
     ]
 
-    // TODO: Сделать компонент ICON
-    // TODO: Решить проблему с активным projects при переключении на отдельный проект
-
     return (
         <BrowserRouter>
             {currentPath[1] !== ''
