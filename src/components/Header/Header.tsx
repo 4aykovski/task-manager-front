@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import classes from './Header.module.css'
 import Card from "../ui/Card/Card";
 import Icon from '../ui/Icon/Icon';
+import {Link} from "react-router-dom";
 
 interface HeaderProps {
     name: string;
@@ -16,11 +17,15 @@ const Header: FC<HeaderProps> = ({name}) => {
                 </Card>
             </div>
             <div className={classes.RightPart}>
-                <Card>
-                    <Icon iconName={"notification.svg"}/>
+                <Card className={classes.Item}>
+                    <Link to={"/profile/notifications"} className={classes.Icons}>
+                        <Icon iconName={"notification.svg"} />
+                    </Link>
                 </Card>
-                <Card>
-                    ProfileIcon
+                <Card className={classes.Item}>
+                    <Link to={"/profile"} className={classes.Icons}>
+                        <Icon iconName={"profile.svg"} />
+                    </Link>
                 </Card>
             </div>
         </header>

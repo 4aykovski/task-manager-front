@@ -3,11 +3,15 @@ import classes from './Card.module.css';
 
 interface CardProps {
     children: React.ReactNode;
+    className?: string;
 }
 
-const Card: FC<CardProps> = ({children}) => {
+const Card: FC<CardProps> = ({children, className}) => {
     return (
-        <div className={classes.Card} >
+        <div className={className
+            ? classes.Card + ' ' + className
+            : classes.Card
+        }>
             {children}
         </div>
     );

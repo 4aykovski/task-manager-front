@@ -3,3 +3,30 @@ header {
     justify-content: space-between;
     padding: 25px 40px;
 }
+
+.LeftPart {
+    cursor: default;
+}
+
+.RightPart {
+    display: flex;
+}
+
+.RightPart .Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+}
+
+.Item:last-child {
+    margin-right: 0;
+}
+
+.Icons {
+    width: 25px;
+    height: 25px;
+}
