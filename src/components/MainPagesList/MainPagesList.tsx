@@ -5,10 +5,9 @@ import {mainPagesListItem} from "../../types/types";
 
 interface MainPagesListProps {
     items: mainPagesListItem[];
-    onClickItem: (item: mainPagesListItem) => void;
 }
 
-const MainPagesList: FC<MainPagesListProps> = ({items, onClickItem}) => {
+const MainPagesList: FC<MainPagesListProps> = ({items }) => {
 
     return (
         <ul className={classes.mainPagesList}>
@@ -16,7 +15,6 @@ const MainPagesList: FC<MainPagesListProps> = ({items, onClickItem}) => {
                 <MainPagesListItem
                     key={item.value}
                     item={item}
-                    onClick={onClickItem}
                 />
             )}
         </ul>

@@ -3,6 +3,8 @@ import {Route, Routes} from "react-router-dom";
 import {publicRoutes} from "../router/routes";
 
 const AppRouter = () => {
+
+
     return (
         <Routes>
             {publicRoutes.map(route =>

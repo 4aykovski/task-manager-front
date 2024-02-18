@@ -7,16 +7,14 @@ import Icon from '../ui/Icon/Icon';
 
 interface MainPagesItemProps {
     item: mainPagesListItem;
-    onClick: (item: mainPagesListItem) => void;
 }
 
-const MainPagesListItem: FC<MainPagesItemProps> = ({item, onClick}) => {
+const MainPagesListItem: FC<MainPagesItemProps> = ({item}) => {
     const isExpanded = useContext(SidebarContext)
 
     return (
         <Link
             to={item.route}
-            onClick={() => onClick(item)}
         >
             <li className={item.activeState[0] ? classes.mainPagesItem + ' ' + classes.active : classes.mainPagesItem}>
                 <Icon iconName={item.iconName} className={classes.icon}></Icon>

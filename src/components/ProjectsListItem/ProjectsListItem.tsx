@@ -7,16 +7,14 @@ import Icon from "../ui/Icon/Icon";
 
 interface ProjectItemProps {
     item: projectsListItem
-    onClick: (item: projectsListItem) => void;
 }
 
-const ProjectsListItem: FC<ProjectItemProps> = ({item, onClick}) => {
+const ProjectsListItem: FC<ProjectItemProps> = ({item}) => {
     const isExpanded = useContext(SidebarContext)
 
     return (
         <Link
-            to={item.route}
-            onClick={() => onClick(item)}>
+            to={item.route}>
             <div className={classes.projectsListItemWrapper}>
                 <Icon iconName={item.iconName} className={classes.itemIcon}></Icon>
                 {isExpanded
@@ -27,7 +25,6 @@ const ProjectsListItem: FC<ProjectItemProps> = ({item, onClick}) => {
                     :
                     ''
                 }
-
             </div>
         </Link>
     );

@@ -1,17 +1,13 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import {projectsListItem} from "../../types/types";
 import classes from "./ProjectsList.module.css";
 import ProjectsListItem from "../ProjectsListItem/ProjectsListItem";
-import {SidebarContext} from "../../context";
 
 interface ProjectListProps {
     items: projectsListItem[];
-    onClickItem: (item: projectsListItem) => void;
 }
 
-const ProjectsList: FC<ProjectListProps> = ({items, onClickItem}) => {
-    const isExpanded = useContext(SidebarContext)
-
+const ProjectsList: FC<ProjectListProps> = ({items}) => {
     return (
         <div className={classes.projectListWrapper}>
             <div className={classes.text}>Projects</div>
@@ -19,8 +15,7 @@ const ProjectsList: FC<ProjectListProps> = ({items, onClickItem}) => {
                 {items.map(item =>
                     <ProjectsListItem
                         key={item.id}
-                        item={item}
-                        onClick={onClickItem}/>
+                        item={item}/>
                 )}
             </ul>
         </div>

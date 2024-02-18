@@ -1,10 +1,11 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import Logo from "../ui/Logo/Logo";
 import {mainPagesListItem, projectsListItem} from "../../types/types";
 import classes from "./Sidebar.module.css";
 import {SidebarContext} from "../../context";
 import MainPagesList from "../MainPagesList/MainPagesList";
 import ProjectsList from "../ProjectsList/ProjectsList";
+import {useLocation} from "react-router-dom";
 
 interface SidebarProps {
     mainPagesListItems: mainPagesListItem[];
@@ -21,11 +22,17 @@ const Sidebar: FC<SidebarProps> = ({mainPagesListItems, projectsListItems}) => {
     )
     localStorage.setItem('isExpanded', String(isExpanded))
 
-    const changeActiveItem = (item: mainPagesListItem | projectsListItem) => {
-        mainPagesListItems.map(i => i.activeState[1](false))
-        projectsListItems.map(i => i.activeState[1](false))
-        item.activeState[1](true)
-    }
+    const location = useLocation();
+    useEffect(() => {
+        mainPagesListItems.map(i => i.route === location.pathname
+            ? i.activeState[1](true)
+            : i.activeState[1](false)
+        );
+        projectsListItems.map(i => i.route === location.pathname
+            ? i.activeState[1](true)
+            : i.activeState[1](false)
+        );
+    }, [location, mainPagesListItems, projectsListItems])
 
     const iconsDir = `${process.env.PUBLIC_URL}/assets/icons/`
 
@@ -48,11 +55,9 @@ const Sidebar: FC<SidebarProps> = ({mainPagesListItems, projectsListItems}) => {
 
                 <SidebarContext.Provider value={isExpanded}>
                     <MainPagesList
-                        items={mainPagesListItems}
-                        onClickItem={changeActiveItem}/>
+                        items={mainPagesListItems}/>
                     <ProjectsList
-                        items={projectsListItems}
-                        onClickItem={changeActiveItem}/>
+                        items={projectsListItems}/>
                 </SidebarContext.Provider>
             </nav>
         </aside>
