@@ -3,12 +3,12 @@
     height: 100vh;
     background-color: var(--sidebar-background);
     display: block;
-    transition: all 200ms linear;
+    transition: width 200ms linear;
 }
 
 .sidebar.active {
     width: 200px;
-    transition: all 200ms linear;
+    transition: width 200ms linear;
 }
 
 .logoWrapper {
