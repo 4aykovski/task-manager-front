@@ -1,0 +1,17 @@
+.MainWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.RightPart {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0.5;
+}
+
+.LeftPart {
+    flex-grow: 3;
+}

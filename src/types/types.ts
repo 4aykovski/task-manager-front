@@ -14,3 +14,11 @@ export interface projectsListItem {
     iconName: string;
     activeState: [boolean, Dispatch<SetStateAction<boolean>>];
 }
+
+export interface privateTaskListItem {
+    id: number;
+    name: string;
+    route: string;
+    description: string;
+    complete: [boolean, Dispatch<SetStateAction<boolean>>];
+}

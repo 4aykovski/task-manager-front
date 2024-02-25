@@ -1,0 +1,7 @@
+.TelegramCard {
+    max-height: 47%;
+    min-height: 47%;
+    max-width: 90%;
+    min-width: 90%;
+    overflow: hidden;
+}

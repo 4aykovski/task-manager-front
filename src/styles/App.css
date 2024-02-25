@@ -10,6 +10,10 @@
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 #root {
     --sidebar-background: #5C4E69;
     --sidebar-active-background: #4B3E56;
@@ -23,3 +27,4 @@ main {
     height: 100vh;
     background-color: var(--main-background);
 }
+

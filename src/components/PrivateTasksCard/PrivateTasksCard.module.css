@@ -1,0 +1,13 @@
+.PrivateTasksCard {
+    max-height: 47%;
+    min-height: 47%;
+    max-width: 90%;
+    min-width: 90%;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.Heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+}

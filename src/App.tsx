@@ -3,11 +3,12 @@ import './styles/App.css'
 import Sidebar from "./components/Sidebar/Sidebar";
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./components/AppRoute";
+import {mainPagesListItem, projectsListItem} from "./types/types";
 
 function App() {
     const currentPath = window.location.pathname.split('/');
 
-    const mainPagesItems = [
+    const mainPagesItems:mainPagesListItem[] = [
         {
             value: "DASHBOARD",
             route: "/dashboard",
@@ -23,7 +24,7 @@ function App() {
         {value: "TASKS", route: "/tasks", iconName: 'tasks.svg', activeState: useState(currentPath[1] === 'tasks')},
     ]
 
-    const projectListItems = [
+    const projectListItems:projectsListItem[] = [
         {
             id: 1,
             name: "Project1",

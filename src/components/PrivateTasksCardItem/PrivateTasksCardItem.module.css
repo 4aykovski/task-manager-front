@@ -1,0 +1,67 @@
+.Item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.ItemNumber {
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+    flex-grow: 0;
+}
+
+.ItemNameWrapper {
+    display: inline-block;
+    width: 90%;
+    max-width: 90%;
+    flex-grow: 3;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.ItemName {
+    cursor: pointer;
+}
+
+.CheckboxWrapper input[type="checkbox"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 1em;
+    margin-right: 0.5em;
+    border: 0.15em solid #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+input:checked {
+    background-color: #ffffff;
+    position: relative;
+}
+
+input:checked::before {
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    right: 1px;
+    top: -5px;
+}
+
+.CheckboxWrapper input[type="checkbox"]:disabled {
+    border-color: #c0c0c0;
+    background-color: #c0c0c0;
+}
+
+.CheckboxWrapper input[type="checkbox"]:disabled + span {
+    color: #c0c0c0;
+}
+
+.CheckboxWrapper input[type="checkbox"]:focus {
+    box-shadow: 0 0 5px #ffffff;
+}
