@@ -14,13 +14,17 @@ const PrivateTasksCard: FC<PrivateTasksCardProps> = ({tasks}) => {
     return (
         <Card className={classes.PrivateTasksCard}>
             <div className={classes.Heading}>Private tasks - {tasks.length}</div>
-            <ul>
-                {tasks.map((task) => (
-                    <PrivateTasksCardItem
-                    key={task.id}
-                    task={task}/>
-                ))}
-            </ul>
+            <div className={classes.PrivateTasksCardListWrapper}>
+                <div className={classes.PrivateTasksCardList}>
+                    <ul>
+                        {tasks.map((task) => (
+                            <PrivateTasksCardItem
+                                key={task.id}
+                                task={task}/>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </Card>
     );
 };

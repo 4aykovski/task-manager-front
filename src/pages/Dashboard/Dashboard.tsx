@@ -24,6 +24,20 @@ const Dashboard = () => {
             description: 'task 2 description',
             complete: useState(true)
         },
+        {
+            id: 3,
+            route: "/task/2",
+            name: 'task 2',
+            description: 'task 2 description',
+            complete: useState(true)
+        },
+        {
+            id: 4,
+            route: "/task/2",
+            name: 'task 2',
+            description: 'task 2 description',
+            complete: useState(true)
+        },
     ]
 
 
