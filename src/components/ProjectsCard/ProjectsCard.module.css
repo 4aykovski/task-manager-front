@@ -4,4 +4,33 @@
     max-width: 100%;
     min-width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.Heading {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 25px;
+    font-size: 25px;
+}
+
+.ProjectBoard {
+    margin: 0 15px 25px 15px;
+    flex: 1;
+    display: flex;
+}
+
+.BoardsList {
+    flex: 0.25;
+    background-color: silver;
+    border-radius: 10px;
+}
+
+.TasksColumns {
+    flex: 0.75;
+    display: flex;
+
 }
