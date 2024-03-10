@@ -1,0 +1,36 @@
+.Modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalContent {
+    border-radius: 10px;
+    width: 400px;
+    background-color: var(--card-background);
+}
+
+.ModalHeader, .ModalFooter {
+    padding: 12px;
+}
+
+.ModalBody {
+    padding: 20px;
+    border-top: 1px solid var(--sidebar-active-background);
+}
+
+.ModalHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.ModalFooter {
+    display: flex;
+    justify-content: space-around;
+}

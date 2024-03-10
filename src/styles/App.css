@@ -10,8 +10,23 @@
     text-decoration: none;
 }
 
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+
 li {
     list-style-type: none;
+}
+
+html {
+    overflow: hidden;
 }
 
 #root {
@@ -20,11 +35,14 @@ li {
     --main-background: #6C5B7B;
     --card-background: #5C4E69;
     display: flex;
+    background-color: var(--main-background);
 }
 
 main {
+    max-width: calc(100% - 200px);
+    background-size: 100% auto;
+    display: flex;
     flex: 1;
     height: 100vh;
-    background-color: var(--main-background);
 }
 

@@ -3,7 +3,6 @@
     min-height: 47%;
     max-width: 90%;
     min-width: 90%;
-    overflow: hidden;
     padding: 25px;
 }
 
@@ -19,6 +18,20 @@
 }
 
 .Heading {
+    white-space: nowrap;
     font-size: 25px;
     margin-bottom: 10px;
+    width: 250px;
+}
+
+.TitleForm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DescriptionForm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

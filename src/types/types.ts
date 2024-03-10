@@ -20,5 +20,5 @@ export interface privateTaskListItem {
     name: string;
     route: string;
     description: string;
-    complete: [boolean, Dispatch<SetStateAction<boolean>>];
+    complete: boolean;
 }

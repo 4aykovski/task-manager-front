@@ -21,16 +21,42 @@
     margin: 0 15px 25px 15px;
     flex: 1;
     display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 
 .BoardsList {
-    flex: 0.25;
+    width: 250px;
     background-color: silver;
     border-radius: 10px;
+    margin-right: 5px;
 }
 
-.TasksColumns {
-    flex: 0.75;
+.BoardsColumnsWrapper {
+    flex: 1;
     display: flex;
+    overflow: hidden;
+}
 
+.BoardsColumns {
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+
+.BoardsColumn {
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: white;
+
+}
+
+.BoardColumn:last-child {
+    margin-right: 0;
 }

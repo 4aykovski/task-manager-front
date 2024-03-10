@@ -12,8 +12,41 @@ const ProjectsCard = () => {
                 <div className={classes.BoardsList}>
 
                 </div>
-                <div className={classes.TasksColumns}>
+                <div className={classes.BoardsColumnsWrapper}>
+                    <div className={classes.BoardsColumns}>
+                        <div className={classes.BoardsColumn}>
 
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+                        <div className={classes.BoardsColumn}>
+
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </Card>

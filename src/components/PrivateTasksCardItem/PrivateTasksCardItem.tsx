@@ -5,11 +5,15 @@ import classes from "./PrivateTasksCardItem.module.css";
 
 interface PrivateTasksCardItemProps {
     task: privateTaskListItem,
+    tasks: privateTaskListItem[],
+    setTasks: (value: (((prevState: privateTaskListItem[]) => privateTaskListItem[]) | privateTaskListItem[])) => void
 }
 
-const PrivateTasksCardItem: FC<PrivateTasksCardItemProps> = ({ task}) => {
+const PrivateTasksCardItem: FC<PrivateTasksCardItemProps> = ({ task, tasks , setTasks}) => {
     const changeTaskStatus = (event: React.ChangeEvent<HTMLInputElement>) => {
-        task.complete[1](event.target.checked)
+        const newTasks = [...tasks];
+        newTasks.find(task => task.id === Number(event.target.name))!.complete = event.target.checked;
+        setTasks(newTasks);
     }
 
     return (
@@ -26,7 +30,7 @@ const PrivateTasksCardItem: FC<PrivateTasksCardItemProps> = ({ task}) => {
                 <input
                     type="checkbox"
                     className={classes.CustomCheckbox}
-                    checked={task.complete[0]}
+                    checked={task.complete}
                     onChange={changeTaskStatus}
                     name={task.id.toString()}/>
             </div>

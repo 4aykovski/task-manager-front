@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    flex: 1;
+    max-width: 100%;
 }
 
 .RightPart {
@@ -9,9 +11,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 0.5;
 }
 
 .LeftPart {
-    flex-grow: 3;
+    max-width: calc(100% - 300px);
+    flex: 1;
 }
