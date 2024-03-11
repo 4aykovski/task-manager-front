@@ -18,13 +18,17 @@ const Header: FC<HeaderProps> = ({name}) => {
             </div>
             <div className={classes.RightPart}>
                 <Card className={classes.Item}>
-                    <Link to={"/profile/notifications"} className={classes.Icons}>
-                        <Icon iconName={"notification.svg"} />
+                    <Link
+                        to={"/profile/notifications"}
+                        className={classes.Icons}>
+                        <Icon iconName={"notification.svg"}/>
                     </Link>
                 </Card>
                 <Card className={classes.Item}>
-                    <Link to={"/profile"} className={classes.Icons}>
-                        <Icon iconName={"profile.svg"} />
+                    <Link
+                        to={"/profile"}
+                        className={classes.Icons}>
+                        <Icon iconName={"profile.svg"}/>
                     </Link>
                 </Card>
             </div>

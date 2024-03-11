@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Header from "../../components/Header/Header";
 import Content from "../../components/Content/Content";
 import PrivateTasksCard from "../../components/PrivateTasksCard/PrivateTasksCard";
@@ -41,14 +41,14 @@ const Dashboard = () => {
     ]);
 
 
-
-
     return (
         <div className={classes.MainWrapper}>
             <Header name="Dashboard"/>
             <Content>
                 <div className={classes.RightPart}>
-                    <PrivateTasksCard tasks={tasks} setTasks={setTasks}/>
+                    <PrivateTasksCard
+                        tasks={tasks}
+                        setTasks={setTasks}/>
                     <TelegramCard/>
                 </div>
                 <div className={classes.LeftPart}>

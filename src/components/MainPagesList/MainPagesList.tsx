@@ -7,7 +7,7 @@ interface MainPagesListProps {
     items: mainPagesListItem[];
 }
 
-const MainPagesList: FC<MainPagesListProps> = ({items }) => {
+const MainPagesList: FC<MainPagesListProps> = ({items}) => {
 
     return (
         <ul className={classes.mainPagesList}>

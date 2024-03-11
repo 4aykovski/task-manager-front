@@ -8,7 +8,7 @@ import {mainPagesListItem, projectsListItem} from "./types/types";
 function App() {
     const currentPath = window.location.pathname.split('/');
 
-    const mainPagesItems:mainPagesListItem[] = [
+    const mainPagesItems: mainPagesListItem[] = [
         {
             value: "DASHBOARD",
             route: "/dashboard",
@@ -24,7 +24,7 @@ function App() {
         {value: "TASKS", route: "/tasks", iconName: 'tasks.svg', activeState: useState(currentPath[1] === 'tasks')},
     ]
 
-    const projectListItems:projectsListItem[] = [
+    const projectListItems: projectsListItem[] = [
         {
             id: 1,
             name: "Project1",

@@ -10,7 +10,7 @@ interface PrivateTasksCardProps {
     setTasks: (value: (((prevState: privateTaskListItem[]) => privateTaskListItem[]) | privateTaskListItem[])) => void
 }
 
-const PrivateTasksCard: FC<PrivateTasksCardProps> = ({ tasks, setTasks }) => {
+const PrivateTasksCard: FC<PrivateTasksCardProps> = ({tasks, setTasks}) => {
     const [modal, setModal] = useState(false);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');

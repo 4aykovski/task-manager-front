@@ -4,19 +4,22 @@ import classes from "./Modal.module.css"
 interface ModalProps {
     active: boolean;
     title: string;
-    onSubmit?: () => void;
     onClose: () => void;
     children: React.ReactNode
 }
 
-const Modal: FC<ModalProps> = ({active, title, onSubmit, onClose, children}) => {
+const Modal: FC<ModalProps> = ({active, title, onClose, children}) => {
     if (!active) {
         return null;
     }
 
     return (
-        <div className={classes.Modal} onClick={onClose}>
-            <div className={classes.ModalContent} onClick={event => event.stopPropagation()}>
+        <div
+            className={classes.Modal}
+            onClick={onClose}>
+            <div
+                className={classes.ModalContent}
+                onClick={event => event.stopPropagation()}>
                 <div className={classes.ModalHeader}>
                     <div className={classes.ModalTitle}>
                         {title}

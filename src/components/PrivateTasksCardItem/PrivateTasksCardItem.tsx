@@ -9,7 +9,7 @@ interface PrivateTasksCardItemProps {
     setTasks: (value: (((prevState: privateTaskListItem[]) => privateTaskListItem[]) | privateTaskListItem[])) => void
 }
 
-const PrivateTasksCardItem: FC<PrivateTasksCardItemProps> = ({ task, tasks , setTasks}) => {
+const PrivateTasksCardItem: FC<PrivateTasksCardItemProps> = ({task, tasks, setTasks}) => {
     const changeTaskStatus = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newTasks = [...tasks];
         newTasks.find(task => task.id === Number(event.target.name))!.complete = event.target.checked;

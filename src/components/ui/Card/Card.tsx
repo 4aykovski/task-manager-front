@@ -8,10 +8,11 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({children, className}) => {
     return (
-        <div className={className
-            ? classes.Card + ' ' + className
-            : classes.Card
-        }>
+        <div
+            className={className
+                ? classes.Card + ' ' + className
+                : classes.Card
+            }>
             {children}
         </div>
     );

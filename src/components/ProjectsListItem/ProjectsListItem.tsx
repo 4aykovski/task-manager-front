@@ -16,7 +16,9 @@ const ProjectsListItem: FC<ProjectItemProps> = ({item}) => {
         <Link
             to={item.route}>
             <div className={classes.projectsListItemWrapper}>
-                <Icon iconName={item.iconName} className={classes.itemIcon}></Icon>
+                <Icon
+                    iconName={item.iconName}
+                    className={classes.itemIcon}></Icon>
                 {isExpanded
                     ?
                     <li className={item.activeState[0] ? classes.projectsListItem + ' ' + classes.active : classes.projectsListItem}>
