@@ -30,8 +30,16 @@
     justify-content: space-between;
 }
 
+.TitleInput {
+    color: black;
+}
+
 .DescriptionForm {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.DescriptionInput {
+    color: black;
 }

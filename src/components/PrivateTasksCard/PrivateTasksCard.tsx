@@ -71,6 +71,7 @@ const PrivateTasksCard: FC<PrivateTasksCardProps> = ({ tasks, setTasks }) => {
                         name="title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        className={classes.TitleInput}
                     />
                 </div>
                 <div className={classes.DescriptionForm}>
@@ -80,6 +81,7 @@ const PrivateTasksCard: FC<PrivateTasksCardProps> = ({ tasks, setTasks }) => {
                         name="description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
+                        className={classes.DescriptionInput}
                     />
                 </div>
                 <button
